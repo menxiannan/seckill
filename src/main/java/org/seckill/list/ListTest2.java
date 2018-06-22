@@ -69,7 +69,6 @@ public class ListTest2 {
         return result;
     }
 
-    p
 
     /**
      * 去重复；
