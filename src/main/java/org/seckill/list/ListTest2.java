@@ -12,7 +12,43 @@ import java.util.List;
 public class ListTest2 {
 
     public static void main(String[] args) {
-        t7();
+
+        List<Integer> list1 = new ArrayList<Integer>();
+        for (int i = 0; i < 7; i++) {
+            list1.add(i);
+        }
+        List<Integer> list2 = new ArrayList<Integer>();
+        for (int i = 3; i < 10; i++) {
+            list2.add(i);
+        }
+        System.out.println("List1：" + list1);
+        System.out.println("List2：" + list2);
+        System.out.println("交集为" + getIntersection(list1, list2));
+
+
+//        List<Integer> ids = new ArrayList<Integer>();
+//        ids.add(1);
+//        ids.add(2);
+//        ids.add(3);
+//        ids.add(4);
+//
+//
+//        List<Integer> iiIds = new ArrayList<Integer>();
+//        iiIds.add(1);
+//        iiIds.add(2);
+//        iiIds.add(3);
+//        iiIds.add(4);
+//
+//
+//        Collection exists=new ArrayList<Integer>(ids);
+//        exists.removeAll(iiIds);
+//        System.out.println(ids);
+//        System.out.println(iiIds);
+//        System.out.println(exists);
+//        System.out.println(exists.size());
+
+
+//        t7();
 //        String text = "a r b k c d se f g a d f s s f d s ft gh f ws w f v x s g h d h j j k f sd j e wed a d f";
 //        List<String> list = new ArrayList<String>();
 //        list.addAll(Arrays.asList(text.split(" ")));
@@ -22,6 +58,18 @@ public class ListTest2 {
 //        }
     }
 
+    public static List<Integer> getIntersection(List<Integer> list1,
+                                                List<Integer> list2) {
+        List<Integer> result = new ArrayList<Integer>();
+        for (Integer integer : list2) {//遍历list1
+            if (list1.contains(integer)) {//如果存在这个数
+                result.add(integer);//放进一个list里面，这个list就是交集
+            }
+        }
+        return result;
+    }
+
+    p
 
     /**
      * 去重复；
