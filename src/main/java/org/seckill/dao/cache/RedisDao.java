@@ -83,7 +83,8 @@ public class RedisDao {
                 jedis.close();
             }
         } catch (Exception e) {
-            logger.error(e.getMessage(), e);
+            logger.error("RedisDao.getSeckill error：", e);
+            logger.error("RedisDao.getSeckill error：redis可能没有开启！！！");
         }
         return null;
     }
@@ -103,7 +104,8 @@ public class RedisDao {
                 jedis.close();
             }
         } catch (Exception e) {
-            logger.error(e.getMessage(), e);
+            logger.error("RedisDao.getSeckill error：", e);
+            logger.error("RedisDao.getSeckill error：redis可能没有开启！！！");
         }
         return null;
     }
